@@ -2,7 +2,6 @@ package org.javaacademy.atomicstation.nuclearstation;
 
 import lombok.RequiredArgsConstructor;
 import org.javaacademy.atomicstation.economic.EconomicDepartment;
-import org.javaacademy.atomicstation.nuclearstation.security.SecurityDepartment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
@@ -19,7 +18,7 @@ public class NuclearStation {
     private long countEnergyAllTime = 0;
     private static final String TEXT_ACCIDENT = "Внимание! Происходят работы на атомной станции! Электричества нет!";
 
-    public void startYear() {
+    protected void startYear() {
         infoStart();
         long countEnergyYear = 0;
         for (int i = 1; i <= 365; i++) {
@@ -42,7 +41,7 @@ public class NuclearStation {
         System.out.printf("Количество инцидентов за всю работу станции: %s\n", accidentCountAllTime);
     }
 
-    public void incrementAccident(int count) {
+    protected void incrementAccident(int count) {
         accidentCountAllTime += count;
     }
 

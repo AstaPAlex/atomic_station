@@ -1,4 +1,4 @@
-package org.javaacademy.atomicstation.nuclearstation.security;
+package org.javaacademy.atomicstation.nuclearstation;
 
 import lombok.*;
 import org.javaacademy.atomicstation.nuclearstation.NuclearStation;
@@ -23,7 +23,7 @@ public class SecurityDepartment {
         return accidentCountPeriod;
     }
 
-    public void reset() {
+    protected void reset() {
         nuclearStation.incrementAccident(accidentCountPeriod);
         accidentCountPeriod = 0;
     }

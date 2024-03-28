@@ -3,7 +3,6 @@ package org.javaacademy.atomicstation.nuclearstation;
 import lombok.RequiredArgsConstructor;
 import org.javaacademy.atomicstation.nuclearstation.exceptions.NuclearFuelIsEmptyException;
 import org.javaacademy.atomicstation.nuclearstation.exceptions.ReactorWorkException;
-import org.javaacademy.atomicstation.nuclearstation.security.SecurityDepartment;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,7 +12,7 @@ public class ReactorDepartment {
     private boolean isWork = false;
     private int countStart = 0;
 
-    public long run() throws ReactorWorkException, NuclearFuelIsEmptyException {
+    protected long run() throws ReactorWorkException, NuclearFuelIsEmptyException {
         if (isWork) {
             securityDepartment.addAccident();
             throw new ReactorWorkException("Реактор уже работает");
@@ -27,7 +26,7 @@ public class ReactorDepartment {
         return 10_000_000;
     }
 
-    public void stop() throws ReactorWorkException {
+    protected void stop() throws ReactorWorkException {
         if (!isWork) {
             securityDepartment.addAccident();
             throw new ReactorWorkException("Реактор уже выключен");

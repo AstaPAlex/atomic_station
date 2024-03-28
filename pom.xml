@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>org.javaacademy</groupId>
 	<artifactId>atomic_station</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.3</version>
 	<name>atomic_station</name>
 	<description>Project for Spring Boot</description>
 	<properties>
