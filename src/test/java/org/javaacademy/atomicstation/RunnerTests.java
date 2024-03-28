@@ -1,4 +1,4 @@
-package org.javaacademy.atomic_station;
+package org.javaacademy.atomicstation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
