@@ -2,3 +2,4 @@ economicdepartment:
   name: Morocco
   currency: "дирхам"
   price: 5
+  additionalprice: 1

@@ -1,7 +1,6 @@
 package org.javaacademy.atomicstation.nuclearstation;
 
 import lombok.*;
-import org.javaacademy.atomicstation.nuclearstation.NuclearStation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
@@ -23,7 +22,7 @@ public class SecurityDepartment {
         return accidentCountPeriod;
     }
 
-    protected void reset() {
+    public void reset() {
         nuclearStation.incrementAccident(accidentCountPeriod);
         accidentCountPeriod = 0;
     }

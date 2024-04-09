@@ -1,8 +1,8 @@
 package org.javaacademy.atomicstation.economic;
 
+import java.math.BigDecimal;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
-import java.math.BigDecimal;
 
 @Getter
 public abstract class EconomicDepartment {

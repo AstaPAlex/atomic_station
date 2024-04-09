@@ -12,7 +12,7 @@ public class ReactorDepartment {
     private boolean isWork = false;
     private int countStart = 0;
 
-    protected long run() throws ReactorWorkException, NuclearFuelIsEmptyException {
+    public long run() throws ReactorWorkException, NuclearFuelIsEmptyException {
         if (isWork) {
             securityDepartment.addAccident();
             throw new ReactorWorkException("Реактор уже работает");
@@ -26,7 +26,7 @@ public class ReactorDepartment {
         return 10_000_000;
     }
 
-    protected void stop() throws ReactorWorkException {
+    public void stop() throws ReactorWorkException {
         if (!isWork) {
             securityDepartment.addAccident();
             throw new ReactorWorkException("Реактор уже выключен");
