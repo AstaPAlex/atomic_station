@@ -1,10 +1,9 @@
 package org.javaacademy.atomicstation.nuclearstation;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.javaacademy.atomicstation.config.Log;
 import org.javaacademy.atomicstation.economic.EconomicDepartment;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -34,6 +33,7 @@ public class NuclearStation {
         securityDepartment.reset();
     }
 
+    @Log
     public void start(int year) {
         for (int i = 1; i <= year; i++) {
             startYear();
@@ -41,6 +41,7 @@ public class NuclearStation {
         System.out.printf("Количество инцидентов за всю работу станции: %s\n", accidentCountAllTime);
     }
 
+    @Log
     public void incrementAccident(int count) {
         accidentCountAllTime += count;
     }

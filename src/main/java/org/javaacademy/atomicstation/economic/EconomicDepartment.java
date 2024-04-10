@@ -2,6 +2,7 @@ package org.javaacademy.atomicstation.economic;
 
 import java.math.BigDecimal;
 import lombok.Getter;
+import org.javaacademy.atomicstation.config.Log;
 import org.springframework.beans.factory.annotation.Value;
 
 @Getter

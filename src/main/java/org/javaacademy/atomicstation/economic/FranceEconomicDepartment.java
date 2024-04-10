@@ -1,9 +1,11 @@
 package org.javaacademy.atomicstation.economic;
 
 import java.math.BigDecimal;
+import org.javaacademy.atomicstation.config.Log;
 
 public class FranceEconomicDepartment extends EconomicDepartment {
 
+    @Log
     @Override
     public BigDecimal computeYearIncomes(long countElectricity) {
         BigDecimal incomes = BigDecimal.ZERO;

@@ -1,12 +1,14 @@
 package org.javaacademy.atomicstation.economic;
 
 import java.math.BigDecimal;
+import org.javaacademy.atomicstation.config.Log;
 import org.springframework.beans.factory.annotation.Value;
 
 public class MoroccoEconomicDepartment extends EconomicDepartment {
     @Value("${economicdepartment.additionalprice}")
     private String additionalPrice;
 
+    @Log
     @Override
     public BigDecimal computeYearIncomes(long countElectricity) {
         BigDecimal incomes = BigDecimal.ZERO;

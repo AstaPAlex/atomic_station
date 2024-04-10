@@ -1,5 +1,7 @@
-package org.javaacademy.atomicstation.economic;
+package org.javaacademy.atomicstation.config;
 
+import org.javaacademy.atomicstation.economic.FranceEconomicDepartment;
+import org.javaacademy.atomicstation.economic.MoroccoEconomicDepartment;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
